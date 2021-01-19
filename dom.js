@@ -4,8 +4,7 @@ let cards = Array.from(document.querySelectorAll(".card"));
 let plusBtns = Array.from(document.querySelectorAll(".plus-btn"));
 let minusBtns = Array.from(document.querySelectorAll(".minus-btn"));
 let totalPrice = document.querySelector(".total-price");
-let quantities = Array.from(document.querySelectorAll(".qute"));
-let unitPrices = Array.from(document.querySelectorAll(".unit-price"));
+
 // Favourites Part
 for (let fav of favs) {
   fav.addEventListener("click", function () {
@@ -44,6 +43,8 @@ for (let minusBtn of minusBtns) {
 
 // Total price
 function total() {
+  let quantities = Array.from(document.querySelectorAll(".qute"));
+let unitPrices = Array.from(document.querySelectorAll(".unit-price"));
   let s = 0;
   for (let i in unitPrices) {
     s = s + +unitPrices[i].innerHTML * +quantities[i].innerHTML;
